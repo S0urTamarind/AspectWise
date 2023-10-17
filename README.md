@@ -54,8 +54,6 @@ We used a pre-trained BERT model for the TABSA task, after fine-tuning it.
 We generated reviews for our own class of products, under various brands.
 We chose the headphone industry, targeting three brands Bose, JBL and Sony. The aspects which we considered were build quality, audio quality and pricing. We took the help of the 3rd generation of GPT, developed by OpenAI, to generate reviews for various products, taking into consideration all the three aspects.
 
-![Dataset](dataset.png)
-
 ## Model and Architecture
 ### TABSA model
 
@@ -65,16 +63,12 @@ We chose the headphone industry, targeting three brands Bose, JBL and Sony. The 
     
 -   The pre-trained DistilBERT has 12 blocks, the hidden layer size is 768, the number of attention heads is 12 and the number of parameters is 66M.
 
-![Model Output](model_output.jpeg)
-
 ### A Simple Recommender
 -   We built a simple recommender system which ranks the brands with respect to each aspect. It recommends based on the probability output of the TABSA model.
     
 -   The core concept is for each target(brand) and each aspect we take out the probabilities with which they were classified into that category and take the mean of all those reviews which were classified into that particular aspect of that brand.
     
 -   In this manner we get values which are then used to rank the products based on the aspects.
-
-![Recommendation Output](recommendation_output.jpeg)
 
 ### A Simple Web App
 -   In the web - app we have a text box which will take the review from the user which is commented over any specified aspect of any of the specified brand and the model in the backend gives out the output which would predict the sentiment recognizing which target aspect pair is being talked about.
@@ -90,8 +84,6 @@ We chose the headphone industry, targeting three brands Bose, JBL and Sony. The 
 -   Also there is a Dataset section which has sample dataset used for each target during training.
 
 -   Model Link : https://aspectwise-exfqypj96el.streamlit.app/
-
-![Product](product.png)
 
 ## Conclusion
 We were able to build a model that could classify headphone reviews into target-aspect pairs and give the sentiment of the review with high accuracy using DistilBERT. In the process of building the final project, we learnt about the basics of Machine Learning, Neural Networks, did some Kaggle tasks and learnt about fine-tuning BERT.
