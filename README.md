@@ -26,7 +26,6 @@
 
 
 ## Introduction and Overview
-[REPO LINK](https://github.com/csking101/AspectWise)
 
 The system aims to understand customer opinions about various aspects of a product, for example, the design, build quality, price, etc. And uses that information to make personalized recommendations.
 
